@@ -1,4 +1,9 @@
-
+/**
+ * Methode zum Anlegen vom Namensräumen.
+ * 
+ * @param {Object} ns
+ * @param {Object} ns_string
+ */
 exports.extendNamespace=function( ns, ns_string ) {
     var parts = ns_string.split('.'),
         parent = ns,
