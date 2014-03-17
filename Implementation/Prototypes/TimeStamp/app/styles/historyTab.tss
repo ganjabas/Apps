@@ -1,0 +1,9 @@
+"#historyTab":{
+	title:'HISTORY',
+	font:{fontSize:35}		
+}
+
+"#row":{
+	textAlign:'center',
+	font:{fontSize:35}
+}

@@ -1,0 +1,10 @@
+<Alloy>
+	<Tab id="timerTab">
+		<Window id="timerWindow">
+			<ImageView id="startButtonImage" onClick="startButtonClick">
+				<Label id="startButtonLabel"></Label>
+			<ImageView>
+		</Window>	
+	</Tab>
+</Alloy>
+

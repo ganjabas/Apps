@@ -1,0 +1,12 @@
+"#startButtonImage": {
+	image:'/images/startButton.png',
+} 
+
+"#startButtonLabel":{
+	text:'START'	
+}
+
+"#timerTab":{
+	title:'TIMER',
+	font:{fontSize:35}		
+}
