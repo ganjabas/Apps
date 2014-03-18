@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js</title>
+    <title>/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -88,36 +88,123 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js</h1>
+                        <h1 class="file-heading">File: /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
 /**
- * Methode zum Anlegen vom Namensräumen.
+ * Stellt Methoden zur Ermittlung des aktuellen
+ * Datums und der aktuellen Zeit bereit.
  * 
- * @param {Object} ns
- * @param {Object} ns_string
+ * @namespace TSA.app.lib
+ * @class dateTime
  */
-exports.extendNamespace=function( ns, ns_string ) {
-    var parts = ns_string.split(&#x27;.&#x27;),
-        parent = ns,
-        pl, i;
-    if (parts[0] === &quot;TS&quot;) {//ns.getName() 
-        parts = parts.slice(1);
-    }
-    pl = parts.length;
-    for (i = 0; i &lt; pl; i++) {
-        //create a property if it doesnt exist
-        if (typeof parent[parts[i]] === &#x27;undefined&#x27;) {
-            parent[parts[i]] = {};
-        }
-        parent = parent[parts[i]];
-    }
-    return parent;
+
+TSA.app.lib.dateTime = {
+	
+	m_Hours : &quot;&quot;,
+	m_Minutes : &quot;&quot;,
+	m_Seconds : &quot;&quot;, 
+	m_Month : &quot;&quot;, 
+	m_Day : &quot;&quot;, 
+	m_Year : &quot;&quot;,
+	
+	/**
+	 * Setz das aktuelle Datum und die aktuelle Zeit.
+	 * 
+	 * @method setDateTime
+	 */
+	setDateTime : function(){
+		var currentTime = new Date(),
+		hours = currentTime.getHours(),
+		minutes = currentTime.getMinutes(),
+		seconds = currentTime.getSeconds(), 
+		month = currentTime.getMonth() + 1, 
+		day = currentTime.getDate(), 
+		year = currentTime.getFullYear();	
+		
+		this.m_Hours = hours;
+		this.m_Minutes = minutes;
+		this.m_Seconds = seconds; 
+		this.m_Month = month; 
+		this.m_Day = day;
+		this.m_Year = year;
+	},
+	
+	/**
+	 * Liefert Stunden zurück.
+	 * 
+	 * @method getHours
+	 * @return {String} m_Hours
+	 */
+	getHours:function(){
+		if (this.m_Hours &lt; 10) {
+			this.m_Hours = &quot;0&quot; + this.m_Hours;
+		};
+		
+		return this.m_Hours;
+	},
+	
+	/**
+	 * Liefert Minuten zurück.
+	 * 
+	 * @method getMinutes
+	 * @return {String} m_Minutes
+	 */
+	getMinutes : function(){
+
+		if (this.m_Minutes &lt; 10) {
+			this.m_Minutes = &quot;0&quot; + this.m_Minutes;
+		};
+	
+		return this.m_Minutes;
+	},
+	
+	/**
+	 * Liefert Sekunden zurück.
+	 * 
+	 * @method getSeconds
+	 * @return {String} m_Seconds
+	 */
+	getSeconds : function(){
+		
+		if (this.m_Seconds &lt; 10) {
+			this.m_Seconds = &quot;0&quot; + this.m_Seconds;
+		};
+	
+		return this.m_Seconds;
+	},
+	
+	/**
+	 * Liefert Monat zurück.
+	 * 
+	 * @method getMonth
+	 * @return {String} m_Month
+	 */
+	getMonth : function(){
+		return this.m_Month;
+	},
+
+	/**
+	 * Liefert Tag zurück.
+	 * 
+	 * @method getDay
+	 * @return {String} m_Day
+	 */
+	getDay : function(){
+		return this.m_Day;
+	},
+	
+	/**
+	 * Liefert das aktuelle Jahr zurück.
+	 * 
+	 * @method getYear
+	 * @return {String} m_Year
+	 */
+	getYear : function(){
+		return this.m_Year;
+	}
 };
-
-// var mod = extendNamespace(TS, &#x27;TS.lib.timeStamp&#x27;);
-
     </pre>
 </div>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js</title>
+    <title>/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -88,35 +88,61 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js</h1>
+                        <h1 class="file-heading">File: /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
 /**
- * Methode zum Anlegen vom Namensräumen.
- * 
- * @param {Object} ns
- * @param {Object} ns_string
+ * Diese Klasse kümmert sich um die Zeitstempel. Sie 
+ * bietet Methoden zum Hinzufügen und zum Entfernen
+ * der Zeitstempel in die Liste und die Datenbank.
+ *
+ * @namespace TSA
+ * @class timeStampManager
  */
-exports.extendNamespace=function( ns, ns_string ) {
-    var parts = ns_string.split(&#x27;.&#x27;),
-        parent = ns,
-        pl, i;
-    if (parts[0] === &quot;TS&quot;) {//ns.getName() 
-        parts = parts.slice(1);
-    }
-    pl = parts.length;
-    for (i = 0; i &lt; pl; i++) {
-        //create a property if it doesnt exist
-        if (typeof parent[parts[i]] === &#x27;undefined&#x27;) {
-            parent[parts[i]] = {};
-        }
-        parent = parent[parts[i]];
-    }
-    return parent;
-};
+TSA.app.lib.timeStampManager = {
 
-// var mod = extendNamespace(TS, &#x27;TS.lib.timeStamp&#x27;);
+	/**
+	* Fügt einen Zeitstempel in die Liste und in
+	* die Datenbank ein.
+	*
+	* @method addTimeStamp
+	* @param {Collection} eine Liste mit Models
+	* @param {Object} timeStamp
+	*/
+	addTimeStamp : function(collection, timeStamp) {
+	
+		var model = Alloy.createModel(&#x27;timeStampModel&#x27;, {
+			startDate : timeStamp.getStartDate(),
+			endDate : timeStamp.getEndDate(),
+			startTime : timeStamp.getStartTime(),
+			endTime: timeStamp.getEndTime(),
+			total : timeStamp.getStartTime()+&quot;-&quot;+timeStamp.getEndTime()
+		});
+	
+		collection.add(model);
+		model.save();
+		collection.fetch();
+	},
+	
+	/**
+	* Entfernt einen Zeitstempel aus der Liste und aus der
+	* Datenbank.
+	*
+	* @method removeTimeStamp
+	* @param {Collection} collection eine Liste mit Models
+	* @param {Integer} index Index der Zeile die entfernwerden soll.
+	*/
+	removeTimeStamp : function(collection, index) {
+		
+		var model = collection.at(index);
+	
+		collection.remove(model);
+		model.destroy();
+		collection.fetch();
+	}
+
+};
 
     </pre>
 </div>

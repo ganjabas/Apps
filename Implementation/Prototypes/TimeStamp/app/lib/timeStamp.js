@@ -6,11 +6,11 @@
  */
 TSA.app.lib.timeStamp = {
 
-	m_StartDate : "",
-	m_EndDate : "",
-	m_StartTime : "",
-	m_EndTime : "",
-	m_Total : "",
+	m_StartDate : "null",
+	m_EndDate : "null",
+	m_StartTime : "null",
+	m_EndTime : "null",
+	m_Total : "null",
 	
 	/**
 	 * Setzt m_StartDate und m_StartTime. Ersetzt noch 
@@ -36,6 +36,7 @@ TSA.app.lib.timeStamp = {
 	setAllEnds:function(endDate, endTime){
 		this.m_EndDate=endDate;
 		this.m_EndTime=endTime;	
+		this.setTotal();
 	},
 	
 	/**
@@ -131,11 +132,51 @@ TSA.app.lib.timeStamp = {
 	
 	/**
 	 * Rechnet die Gesamtzeit des Zeitstempels
-	 * aus
+	 * aus. Berechnung ÜBERPRÜFEN
 	 * 
 	 * @method setTotal
 	 */
 	setTotal:function(){
-		//this.m_Total=
+		
+		var splitedEndDate = this.m_EndDate.split('/');
+		var splitedEndTime = this.m_EndTime.split(':');
+		
+		// Set the unit values in milliseconds.
+		var msecPerMinute = 1000 * 60;
+		var msecPerHour = msecPerMinute * 60;
+		var msecPerDay = msecPerHour * 24;
+		
+		// Set a date and get the milliseconds
+		var date = new Date(this.m_StartDate);
+		var dateMsec = date.getTime();
+		
+		// Set the date to January 1, at midnight, of the specified year.
+		//date.setMonth(splitedEndDate[0]);
+		date.setDate(this.m_EndDate);
+		//date.setFullYear(splitedEndDate[2]);
+		date.setHours(splitedEndTime[0], splitedEndTime[1], splitedEndTime[2],0);
+		
+		// Get the difference in milliseconds.
+		var interval = dateMsec - date.getTime();
+		
+		// Calculate how many days the interval contains. Subtract that
+		// many days from the interval to determine the remainder.
+		var days = Math.floor(interval / msecPerDay );
+		interval = interval - (days * msecPerDay );
+		
+		// Calculate the hours, minutes, and seconds.
+		var hours = Math.floor(interval / msecPerHour );
+		interval = interval - (hours * msecPerHour );
+		
+		var minutes = Math.floor(interval / msecPerMinute );
+		interval = interval - (minutes * msecPerMinute );
+		
+		var seconds = Math.floor(interval / 1000 );
+		
+		// Display the result.
+		console.log(days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+		this.m_Total=days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+		
+		//Output: 164 days, 23 hours, 0 minutes, 0 seconds.
 	}
 };

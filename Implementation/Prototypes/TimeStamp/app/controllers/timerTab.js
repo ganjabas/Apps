@@ -11,7 +11,7 @@ function startButtonClick(e) {
 
 	if (!startButtonClicked) {	
 		m_DateTime.setDateTime();
-		m_TimeStamp.setAllStarts(m_DateTime.getDay()+"."+m_DateTime.getMonth()+"."
+		m_TimeStamp.setAllStarts(m_DateTime.getMonth()+"/"+m_DateTime.getDay()+"/"
 		+m_DateTime.getYear(),m_DateTime.getHours()+":"+m_DateTime.getMinutes()+":"
 		+m_DateTime.getSeconds());
 		
@@ -26,7 +26,7 @@ function startButtonClick(e) {
 			text : 'START'
 		});
 		m_DateTime.setDateTime();
-		m_TimeStamp.setAllEnds(m_DateTime.getDay()+"."+m_DateTime.getMonth()+"."
+		m_TimeStamp.setAllEnds(m_DateTime.getMonth()+"/"+m_DateTime.getDay()+"/"
 		+m_DateTime.getYear(),m_DateTime.getHours()+":"+m_DateTime.getMinutes()+":"
 		+m_DateTime.getSeconds());
 		TSA.app.lib.timeStampManager.addTimeStamp(timeStampModels, m_TimeStamp);

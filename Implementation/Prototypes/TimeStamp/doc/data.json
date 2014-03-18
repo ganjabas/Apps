@@ -1,6 +1,17 @@
 {
     "project": {},
     "files": {
+        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js": {
+            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "modules": {},
+            "classes": {
+                "TSA.app.lib.dateTime": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TSA.app.lib": 1
+            }
+        },
         "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js": {
             "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js",
             "modules": {},
@@ -12,17 +23,28 @@
             "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
             "modules": {},
             "classes": {
-                "TS.timeStamp": 1
+                "TSA.app.lib.datatypes.timeStamp": 1
             },
             "fors": {},
             "namespaces": {
-                "TS": 1
+                "TSA.app.lib.datatypes": 1
+            }
+        },
+        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js": {
+            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
+            "modules": {},
+            "classes": {
+                "TSA.timeStampManager": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TSA": 1
             }
         },
         "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/alloy.js": {
             "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/alloy.js",
             "modules": {
-                "ts": 1
+                "tsa": 1
             },
             "classes": {},
             "fors": {},
@@ -30,37 +52,154 @@
         }
     },
     "modules": {
-        "ts": {
-            "name": "ts",
+        "tsa": {
+            "name": "tsa",
             "submodules": {},
             "classes": {
-                "TS.timeStamp": 1
+                "TSA.app.lib.dateTime": 1,
+                "TSA.app.lib.datatypes.timeStamp": 1,
+                "TSA.timeStampManager": 1
             },
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
             "line": 1,
             "description": "Namespace Function"
         }
     },
     "classes": {
-        "TS.timeStamp": {
-            "name": "TS.timeStamp",
-            "shortname": "TS.timeStamp",
+        "TSA.app.lib.dateTime": {
+            "name": "TSA.app.lib.dateTime",
+            "shortname": "TSA.app.lib.dateTime",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ts",
-            "namespace": "TS",
+            "module": "tsa",
+            "namespace": "TSA.app.lib",
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 1,
+            "description": "Stellt Methoden zur Ermittlung des aktuellen\nDatums und der aktuellen Zeit bereit."
+        },
+        "TSA.app.lib.datatypes.timeStamp": {
+            "name": "TSA.app.lib.datatypes.timeStamp",
+            "shortname": "TSA.app.lib.datatypes.timeStamp",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "tsa",
+            "namespace": "TSA.app.lib.datatypes",
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 1,
+            "description": "Bildet eine Datenstruktur für ein Zeitstempel."
+        },
+        "TSA.timeStampManager": {
+            "name": "TSA.timeStampManager",
+            "shortname": "TSA.timeStampManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "tsa",
+            "namespace": "TSA",
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
             "line": 1,
             "description": "Diese Klasse kümmert sich um die Zeitstempel. Sie \nbietet Methoden zum Hinzufügen und zum Entfernen\nder Zeitstempel in die Liste und die Datenbank."
         }
     },
     "classitems": [
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 18,
+            "description": "Setz das aktuelle Datum und die aktuelle Zeit.",
+            "itemtype": "method",
+            "name": "setDateTime",
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 40,
+            "description": "Liefert Stunden zurück.",
+            "itemtype": "method",
+            "name": "getHours",
+            "return": {
+                "description": "m_Hours",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 54,
+            "description": "Liefert Minuten zurück.",
+            "itemtype": "method",
+            "name": "getMinutes",
+            "return": {
+                "description": "m_Minutes",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 69,
+            "description": "Liefert Sekunden zurück.",
+            "itemtype": "method",
+            "name": "getSeconds",
+            "return": {
+                "description": "m_Seconds",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 84,
+            "description": "Liefert Monat zurück.",
+            "itemtype": "method",
+            "name": "getMonth",
+            "return": {
+                "description": "m_Month",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 94,
+            "description": "Liefert Tag zurück.",
+            "itemtype": "method",
+            "name": "getDay",
+            "return": {
+                "description": "m_Day",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
+            "line": 104,
+            "description": "Liefert das aktuelle Jahr zurück.",
+            "itemtype": "method",
+            "name": "getYear",
+            "return": {
+                "description": "m_Year",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.dateTime",
+            "namespace": "TSA.app.lib"
+        },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js",
             "line": 1,
@@ -77,10 +216,191 @@
                     "type": "Object"
                 }
             ],
-            "class": "TS.timeStamp"
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib"
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 15,
+            "description": "Setzt m_StartDate und m_StartTime. Ersetzt noch \nden Konstruktor. //TODO: Konstruktor-Funktion",
+            "itemtype": "method",
+            "name": "setAllStarts",
+            "params": [
+                {
+                    "name": "startDate",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "startTime",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 29,
+            "description": "Setzt m_EndDate und m_EndTime. Ersetzt Konstruktor.",
+            "itemtype": "method",
+            "name": "setAllEnds",
+            "params": [
+                {
+                    "name": "endDate",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "endTime",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 42,
+            "description": "Lierert Startdatum des Zeitstempels zurück.",
+            "itemtype": "method",
+            "name": "getStartDate",
+            "return": {
+                "description": "startDate",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 52,
+            "description": "Lierert Enddatum des Zeitstempels zurück.",
+            "itemtype": "method",
+            "name": "getEndDate",
+            "return": {
+                "description": "endDate",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 62,
+            "description": "Lierert Startzeit des Zeitstempels zurück.",
+            "itemtype": "method",
+            "name": "getStartTime",
+            "return": {
+                "description": "startZeit",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 72,
+            "description": "Lierert Endzeit des Zeitstempels zurück.",
+            "itemtype": "method",
+            "name": "getEndTime",
+            "return": {
+                "description": "endTime",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 82,
+            "description": "Addiert Start und Ende des Zeitstempels\nund gibt als Gesamtzeit zurück.",
+            "itemtype": "method",
+            "name": "getTotal",
+            "return": {
+                "description": "total",
+                "type": "String"
+            },
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 93,
+            "description": "Setzt Startdatum des Zeitstempels.",
+            "itemtype": "method",
+            "name": "setStartDate",
+            "params": [
+                {
+                    "name": "startDat",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 103,
+            "description": "Setzt die Startzeit des Zeitstempels.",
+            "itemtype": "method",
+            "name": "setStartTime",
+            "params": [
+                {
+                    "name": "startTime",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 113,
+            "description": "Setzt Enddatum des Zeitstempels.",
+            "itemtype": "method",
+            "name": "setEndDate",
+            "params": [
+                {
+                    "name": "endDate",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 123,
+            "description": "Setzt Endzeit des Zeitstempels.",
+            "itemtype": "method",
+            "name": "setEndTime",
+            "params": [
+                {
+                    "name": "endTime",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 133,
+            "description": "Rechnet die Gesamtzeit des Zeitstempels\naus. Berechnung ÜBERPRÜFEN",
+            "itemtype": "method",
+            "name": "setTotal",
+            "class": "TSA.app.lib.datatypes.timeStamp",
+            "namespace": "TSA.app.lib.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
             "line": 11,
             "description": "Fügt einen Zeitstempel in die Liste und in\ndie Datenbank ein.",
             "itemtype": "method",
@@ -90,14 +410,19 @@
                     "name": "eine",
                     "description": "Liste mit Models",
                     "type": "Collection"
+                },
+                {
+                    "name": "timeStamp",
+                    "description": "",
+                    "type": "Object"
                 }
             ],
-            "class": "TS.timeStamp",
-            "namespace": "TS"
+            "class": "TSA.timeStampManager",
+            "namespace": "TSA"
         },
         {
-            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 49,
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
+            "line": 34,
             "description": "Entfernt einen Zeitstempel aus der Liste und aus der\nDatenbank.",
             "itemtype": "method",
             "name": "removeTimeStamp",
@@ -113,8 +438,8 @@
                     "type": "Integer"
                 }
             ],
-            "class": "TS.timeStamp",
-            "namespace": "TS"
+            "class": "TSA.timeStampManager",
+            "namespace": "TSA"
         }
     ],
     "warnings": [

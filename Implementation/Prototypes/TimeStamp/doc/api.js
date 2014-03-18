@@ -1,15 +1,17 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "TS.timeStamp"
+        "TSA.app.lib.datatypes.timeStamp",
+        "TSA.app.lib.dateTime",
+        "TSA.timeStampManager"
     ],
     "modules": [
-        "ts"
+        "tsa"
     ],
     "allModules": [
         {
-            "displayName": "ts",
-            "name": "ts",
+            "displayName": "tsa",
+            "name": "tsa",
             "description": "Namespace Function"
         }
     ]
