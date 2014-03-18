@@ -1,66 +1,141 @@
 /**
- * Diese Klasse kümmert sich um die Zeitstempel. Sie 
- * bietet Methoden zum Hinzufügen und zum Entfernen
- * der Zeitstempel in die Liste und die Datenbank.
+ * Bildet eine Datenstruktur für ein Zeitstempel.
  *
- * @namespace TS
+ * @namespace TSA.app.lib.datatypes
  * @class timeStamp
- * @module ts
  */
-TS.timeStamp = {
+TSA.app.lib.timeStamp = {
 
+	m_StartDate : "",
+	m_EndDate : "",
+	m_StartTime : "",
+	m_EndTime : "",
+	m_Total : "",
+	
 	/**
-	* Fügt einen Zeitstempel in die Liste und in
-	* die Datenbank ein.
-	*
-	* @method addTimeStamp
-	* @param {Collection} eine Liste mit Models
-	*/
-	addTimeStamp : function(collection) {
-		
-		var currentTime = new Date(),
-			hours = currentTime.getHours(),
-			minutes = currentTime.getMinutes(),
-			seconds = currentTime.getSeconds(),
-			month = currentTime.getMonth() + 1,
-			day = currentTime.getDate(),
-			year = currentTime.getFullYear(); 
-	
-		if (hours < 10) {
-			hours = "0" + hours;
-		};
-		if (minutes < 10) {
-			minutes = "0" + minutes;
-		};
-		if (seconds < 10) {
-			seconds = "0" + seconds;
-		};
-	
-		var model = Alloy.createModel('timeStampModel', {
-			date : day + "." + month + "." + year,
-			time : hours + ":" + minutes + ":" + seconds,
-			total : day + "." + month + "." + year + " - " + hours + ":" + minutes + ":" + seconds
-		});
-	
-		collection.add(model);
-		model.save();
-		collection.fetch();
+	 * Setzt m_StartDate und m_StartTime. Ersetzt noch 
+	 * den Konstruktor. //TODO: Konstruktor-Funktion
+	 * 
+	 * @method setAllStarts
+	 * @param {String} startDate
+	 * @param {String} startTime
+	 * 
+	 */
+	setAllStarts:function(startDate, startTime){
+		this.m_StartDate=startDate;	
+		this.m_StartTime=startTime;
 	},
 	
 	/**
-	* Entfernt einen Zeitstempel aus der Liste und aus der
-	* Datenbank.
-	*
-	* @method removeTimeStamp
-	* @param {Collection} eine Liste mit Models
-	* @param {index} Index der Zeile die entfernwerden soll.
-	*/
-	removeTimeStamp : function(collection, index) {
-		var model = collection.at(index);
+	 * Setzt m_EndDate und m_EndTime. Ersetzt Konstruktor.
+	 * 
+	 * @method setAllEnds
+	 * @param {String} endDate
+	 * @param {String} endTime 
+	 */
+	setAllEnds:function(endDate, endTime){
+		this.m_EndDate=endDate;
+		this.m_EndTime=endTime;	
+	},
 	
-		collection.remove(model);
-		model.destroy();
-		collection.fetch();
-	}
+	/**
+	 * Lierert Startdatum des Zeitstempels zurück.
+	 *
+	 * @method getStartDate
+	 * @return {String} startDate
+	 */
+	getStartDate : function() {
+		return this.m_StartDate;
+	},
 
+	/**
+	 * Lierert Enddatum des Zeitstempels zurück.
+	 *
+	 * @method getEndDate
+	 * @return {String} endDate
+	 */
+	getEndDate : function() {
+		return this.m_EndDate;
+	},
+
+	/**
+	 * Lierert Startzeit des Zeitstempels zurück.
+	 * 
+	 * @method getStartTime
+	 * @return {String} startZeit
+	 */
+	getStartTime : function() {
+		return this.m_StartTime;
+	},
+	
+	/**
+	 * Lierert Endzeit des Zeitstempels zurück.
+	 * 
+	 * @method getEndTime
+	 * @return {String} endTime
+	 */
+	getEndTime : function() {
+		return this.m_EndTime;
+	},
+	
+	/**
+	 * Addiert Start und Ende des Zeitstempels
+	 * und gibt als Gesamtzeit zurück.
+	 * 
+	 * @method getTotal
+	 * @return {String} total
+	 */
+	getTotal : function() {
+		return this.m_Total;
+	},
+	
+	/**
+	 * Setzt Startdatum des Zeitstempels.
+	 * 
+	 * @method setStartDate
+	 * @param {String} startDat
+	 */
+	setStartDate:function(startDate){
+		this.m_StartDate=startDate;
+	},
+	
+	/**
+	 *Setzt die Startzeit des Zeitstempels.
+	 *  
+	 * @method setStartTime
+ 	 * @param {String} startTime
+	 */
+	setStartTime:function(startTime){
+		this.m_StartTime=startTime;
+	},
+	
+	/**
+	 * Setzt Enddatum des Zeitstempels.
+	 * 
+	 * @method setEndDate
+	 * @param {String} endDate
+	 */
+	setEndDate:function(endDate){
+		this.m_EndDate=endDate;
+	},
+	
+	/**
+	 * Setzt Endzeit des Zeitstempels.
+	 * 
+	 * @method setEndTime
+     * @param {String} endTime
+	 */
+	setEndTime:function(endTime){
+		this.m_EndTime=endTime;
+	},
+	
+	/**
+	 * Rechnet die Gesamtzeit des Zeitstempels
+	 * aus
+	 * 
+	 * @method setTotal
+	 */
+	setTotal:function(){
+		//this.m_Total=
+	}
 };

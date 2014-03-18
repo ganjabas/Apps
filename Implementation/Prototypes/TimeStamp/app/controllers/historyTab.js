@@ -13,7 +13,7 @@ timeStampModels.fetch();
 
 	dialog.addEventListener("click", function(e){
 	if(e.index === 0 && selectedRow >-1 ){
-		TS.timeStamp.removeTimeStamp(timeStampModels,selectedRow);
+		TSA.app.lib.timeStampManager.removeTimeStamp(timeStampModels,selectedRow);
 	}
 });
 

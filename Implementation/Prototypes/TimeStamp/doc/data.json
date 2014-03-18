@@ -1,0 +1,126 @@
+{
+    "project": {},
+    "files": {
+        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js": {
+            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js": {
+            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "modules": {},
+            "classes": {
+                "TS.timeStamp": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TS": 1
+            }
+        },
+        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/alloy.js": {
+            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/alloy.js",
+            "modules": {
+                "ts": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ts": {
+            "name": "ts",
+            "submodules": {},
+            "classes": {
+                "TS.timeStamp": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 1,
+            "description": "Namespace Function"
+        }
+    },
+    "classes": {
+        "TS.timeStamp": {
+            "name": "TS.timeStamp",
+            "shortname": "TS.timeStamp",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ts",
+            "namespace": "TS",
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 1,
+            "description": "Diese Klasse kümmert sich um die Zeitstempel. Sie \nbietet Methoden zum Hinzufügen und zum Entfernen\nder Zeitstempel in die Liste und die Datenbank."
+        }
+    },
+    "classitems": [
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js",
+            "line": 1,
+            "description": "Methode zum Anlegen vom Namensräumen.",
+            "params": [
+                {
+                    "name": "ns",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "ns_string",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "TS.timeStamp"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 11,
+            "description": "Fügt einen Zeitstempel in die Liste und in\ndie Datenbank ein.",
+            "itemtype": "method",
+            "name": "addTimeStamp",
+            "params": [
+                {
+                    "name": "eine",
+                    "description": "Liste mit Models",
+                    "type": "Collection"
+                }
+            ],
+            "class": "TS.timeStamp",
+            "namespace": "TS"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
+            "line": 49,
+            "description": "Entfernt einen Zeitstempel aus der Liste und aus der\nDatenbank.",
+            "itemtype": "method",
+            "name": "removeTimeStamp",
+            "params": [
+                {
+                    "name": "collection",
+                    "description": "eine Liste mit Models",
+                    "type": "Collection"
+                },
+                {
+                    "name": "index",
+                    "description": "Index der Zeile die entfernwerden soll.",
+                    "type": "Integer"
+                }
+            ],
+            "class": "TS.timeStamp",
+            "namespace": "TS"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nMethode zum Anlegen vom Namensräumen.",
+            "line": " /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js:1"
+        }
+    ]
+}

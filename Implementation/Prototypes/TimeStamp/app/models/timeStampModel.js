@@ -10,8 +10,10 @@
 exports.definition = {
 	config: {
 		columns: {
-		    "date": "text",
-		    "time":"text",
+		    "startDate": "text",
+		    "endDate":"text",
+		    "startTime":"text",
+		    "endTime":"text",
 		    "total":"text"
 		},
 		adapter: {

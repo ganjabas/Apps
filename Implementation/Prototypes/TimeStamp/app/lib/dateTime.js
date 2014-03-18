@@ -1,28 +1,3 @@
-
-/** @namespace Namespace for MYAPP classes and functions. */
-//var TS = TS || {};
-
-/**
- * A maths utility
- * @namespace MYAPP
- * @class math_stuff
- * @package Titanium
- * @subpackage Media
- * 
- * TS.timeStamp = {};
- */
-
-	//TODO parser stringToInt schreiben, db-struktur überlegen, removeItem schreiben
-	//TODO Struktur für Kommentare überlegen, folien machen
-	//TODO sinnvolle Namen für Variablen überlegen, packages, warum ist die app so groß? wegen DB?
-	//TODO bild machen + button, schöner machen
-	//TODO yuidoc konfigurieren, github, wie svn im institut benutzen d.h ohne Eclipse, video ansehen
-	//TODO projektstruktur anlegen
-	//TODO Fehlerbehandlung
-	
-	
-	
-	
 /**
  * Stellt Methoden zur Ermittlung des aktuellen
  * Datums und der aktuellen Zeit bereit.
@@ -69,8 +44,8 @@ TSA.app.lib.dateTime = {
 	 * @return {String} m_Hours
 	 */
 	getHours:function(){
-		if (m_Hours < 10) {
-			m_Hours = "0" + m_Hours;
+		if (this.m_Hours < 10) {
+			this.m_Hours = "0" + this.m_Hours;
 		};
 		
 		return this.m_Hours;
@@ -84,8 +59,8 @@ TSA.app.lib.dateTime = {
 	 */
 	getMinutes : function(){
 
-		if (m_Minutes < 10) {
-			m_Minutes = "0" + m_Minutes;
+		if (this.m_Minutes < 10) {
+			this.m_Minutes = "0" + this.m_Minutes;
 		};
 	
 		return this.m_Minutes;
@@ -99,8 +74,8 @@ TSA.app.lib.dateTime = {
 	 */
 	getSeconds : function(){
 		
-		if (m_Seconds < 10) {
-			m_Seconds = "0" + m_Seconds;
+		if (this.m_Seconds < 10) {
+			this.m_Seconds = "0" + this.m_Seconds;
 		};
 	
 		return this.m_Seconds;
@@ -136,4 +111,3 @@ TSA.app.lib.dateTime = {
 		return this.m_Year;
 	}
 };
-	

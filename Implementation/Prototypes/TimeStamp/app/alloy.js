@@ -14,13 +14,17 @@
 Alloy.Collections.timeStampModel = Alloy.createCollection("timeStampModel");
 
 
-/* Namespace Function */
-var TS = TS || {};
+/**
+ *  Namespace Function 
+ * 
+ * @module tsa
+ * */
+var TSA = TSA || {};
 // var mod = require('namespaceGenerator');
 // mod.extendNamespace(TS, 'TS.timeStamp');
-TS.namespace = function ( ns_string ) {
+TSA.namespace = function ( ns_string ) {
 	var parts = ns_string.split( '.' ),
-		parent = TS, i;
+		parent = TSA, i;
 	if ( parts[ 0 ] === "TS" ) {
 		parts = parts.slice( 1 );
 	}
@@ -33,4 +37,6 @@ TS.namespace = function ( ns_string ) {
 	return parent;
 };
 
-TS.namespace( 'timeStamp' );
+TSA.namespace( 'app.lib.timeStampManager' );
+TSA.namespace( 'app.lib.timeStamp' );
+TSA.namespace( 'app.lib.dateTime' );
