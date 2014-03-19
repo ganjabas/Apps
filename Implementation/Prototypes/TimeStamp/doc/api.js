@@ -6,13 +6,13 @@ YUI.add("yuidoc-meta", function(Y) {
         "TSA.timeStampManager"
     ],
     "modules": [
-        "tsa"
+        "TSA"
     ],
     "allModules": [
         {
-            "displayName": "tsa",
-            "name": "tsa",
-            "description": "Namespace Function"
+            "displayName": "TSA",
+            "name": "TSA",
+            "description": "Hauptnamensraum"
         }
     ]
 } };

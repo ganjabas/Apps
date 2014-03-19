@@ -12,13 +12,6 @@
                 "TSA.app.lib": 1
             }
         },
-        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js": {
-            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
         "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js": {
             "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
             "modules": {},
@@ -41,10 +34,17 @@
                 "TSA": 1
             }
         },
+        "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/util.js": {
+            "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/util.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/alloy.js": {
             "name": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/alloy.js",
             "modules": {
-                "tsa": 1
+                "TSA": 1
             },
             "classes": {},
             "fors": {},
@@ -52,8 +52,8 @@
         }
     },
     "modules": {
-        "tsa": {
-            "name": "tsa",
+        "TSA": {
+            "name": "TSA",
             "submodules": {},
             "classes": {
                 "TSA.app.lib.dateTime": 1,
@@ -64,8 +64,8 @@
             "namespaces": {},
             "tag": "module",
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
-            "line": 1,
-            "description": "Namespace Function"
+            "line": 2,
+            "description": "Hauptnamensraum"
         }
     },
     "classes": {
@@ -77,10 +77,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "tsa",
+            "module": "TSA",
             "namespace": "TSA.app.lib",
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 1,
+            "line": 2,
             "description": "Stellt Methoden zur Ermittlung des aktuellen\nDatums und der aktuellen Zeit bereit."
         },
         "TSA.app.lib.datatypes.timeStamp": {
@@ -91,10 +91,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "tsa",
+            "module": "TSA",
             "namespace": "TSA.app.lib.datatypes",
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 1,
+            "line": 2,
             "description": "Bildet eine Datenstruktur für ein Zeitstempel."
         },
         "TSA.timeStampManager": {
@@ -105,17 +105,17 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "tsa",
+            "module": "TSA",
             "namespace": "TSA",
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
-            "line": 1,
+            "line": 2,
             "description": "Diese Klasse kümmert sich um die Zeitstempel. Sie \nbietet Methoden zum Hinzufügen und zum Entfernen\nder Zeitstempel in die Liste und die Datenbank."
         }
     },
     "classitems": [
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 18,
+            "line": 19,
             "description": "Setz das aktuelle Datum und die aktuelle Zeit.",
             "itemtype": "method",
             "name": "setDateTime",
@@ -124,7 +124,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 40,
+            "line": 41,
             "description": "Liefert Stunden zurück.",
             "itemtype": "method",
             "name": "getHours",
@@ -137,7 +137,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 54,
+            "line": 55,
             "description": "Liefert Minuten zurück.",
             "itemtype": "method",
             "name": "getMinutes",
@@ -150,7 +150,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 69,
+            "line": 70,
             "description": "Liefert Sekunden zurück.",
             "itemtype": "method",
             "name": "getSeconds",
@@ -163,7 +163,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 84,
+            "line": 85,
             "description": "Liefert Monat zurück.",
             "itemtype": "method",
             "name": "getMonth",
@@ -176,7 +176,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 94,
+            "line": 95,
             "description": "Liefert Tag zurück.",
             "itemtype": "method",
             "name": "getDay",
@@ -189,7 +189,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/dateTime.js",
-            "line": 104,
+            "line": 105,
             "description": "Liefert das aktuelle Jahr zurück.",
             "itemtype": "method",
             "name": "getYear",
@@ -201,27 +201,8 @@
             "namespace": "TSA.app.lib"
         },
         {
-            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js",
-            "line": 1,
-            "description": "Methode zum Anlegen vom Namensräumen.",
-            "params": [
-                {
-                    "name": "ns",
-                    "description": "",
-                    "type": "Object"
-                },
-                {
-                    "name": "ns_string",
-                    "description": "",
-                    "type": "Object"
-                }
-            ],
-            "class": "TSA.app.lib.datatypes.timeStamp",
-            "namespace": "TSA.app.lib"
-        },
-        {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 15,
+            "line": 16,
             "description": "Setzt m_StartDate und m_StartTime. Ersetzt noch \nden Konstruktor. //TODO: Konstruktor-Funktion",
             "itemtype": "method",
             "name": "setAllStarts",
@@ -242,7 +223,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 29,
+            "line": 30,
             "description": "Setzt m_EndDate und m_EndTime. Ersetzt Konstruktor.",
             "itemtype": "method",
             "name": "setAllEnds",
@@ -263,7 +244,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 42,
+            "line": 43,
             "description": "Lierert Startdatum des Zeitstempels zurück.",
             "itemtype": "method",
             "name": "getStartDate",
@@ -276,7 +257,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 52,
+            "line": 53,
             "description": "Lierert Enddatum des Zeitstempels zurück.",
             "itemtype": "method",
             "name": "getEndDate",
@@ -289,7 +270,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 62,
+            "line": 63,
             "description": "Lierert Startzeit des Zeitstempels zurück.",
             "itemtype": "method",
             "name": "getStartTime",
@@ -302,7 +283,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 72,
+            "line": 73,
             "description": "Lierert Endzeit des Zeitstempels zurück.",
             "itemtype": "method",
             "name": "getEndTime",
@@ -315,7 +296,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 82,
+            "line": 83,
             "description": "Addiert Start und Ende des Zeitstempels\nund gibt als Gesamtzeit zurück.",
             "itemtype": "method",
             "name": "getTotal",
@@ -328,7 +309,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 93,
+            "line": 94,
             "description": "Setzt Startdatum des Zeitstempels.",
             "itemtype": "method",
             "name": "setStartDate",
@@ -344,7 +325,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 103,
+            "line": 104,
             "description": "Setzt die Startzeit des Zeitstempels.",
             "itemtype": "method",
             "name": "setStartTime",
@@ -360,7 +341,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 113,
+            "line": 114,
             "description": "Setzt Enddatum des Zeitstempels.",
             "itemtype": "method",
             "name": "setEndDate",
@@ -376,7 +357,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 123,
+            "line": 124,
             "description": "Setzt Endzeit des Zeitstempels.",
             "itemtype": "method",
             "name": "setEndTime",
@@ -392,7 +373,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStamp.js",
-            "line": 133,
+            "line": 134,
             "description": "Rechnet die Gesamtzeit des Zeitstempels\naus. Berechnung ÜBERPRÜFEN",
             "itemtype": "method",
             "name": "setTotal",
@@ -401,7 +382,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
-            "line": 11,
+            "line": 12,
             "description": "Fügt einen Zeitstempel in die Liste und in\ndie Datenbank ein.",
             "itemtype": "method",
             "name": "addTimeStamp",
@@ -422,7 +403,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/timeStampManager.js",
-            "line": 34,
+            "line": 35,
             "description": "Entfernt einen Zeitstempel aus der Liste und aus der\nDatenbank.",
             "itemtype": "method",
             "name": "removeTimeStamp",
@@ -440,12 +421,31 @@
             ],
             "class": "TSA.timeStampManager",
             "namespace": "TSA"
+        },
+        {
+            "file": "/Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/util.js",
+            "line": 1,
+            "description": "Methode zum Anlegen vom Namensräumen.",
+            "params": [
+                {
+                    "name": "ns",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "ns_string",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "namespace": "TSA"
         }
     ],
     "warnings": [
         {
             "message": "Missing item type\nMethode zum Anlegen vom Namensräumen.",
-            "line": " /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/namespaceGenerator.js:1"
+            "line": " /Users/mbp02/Documents/Apps/Implementation/Prototypes/TimeStamp/app/lib/util.js:1"
         }
     ]
 }

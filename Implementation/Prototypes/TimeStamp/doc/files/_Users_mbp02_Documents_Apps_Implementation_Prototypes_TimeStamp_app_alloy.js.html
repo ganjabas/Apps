@@ -51,7 +51,7 @@
 
             <ul id="api-modules" class="apis modules">
             
-                <li><a href="../modules/tsa.html">tsa</a></li>
+                <li><a href="../modules/TSA.html">TSA</a></li>
             
             </ul>
         </div>
@@ -109,31 +109,12 @@ Alloy.Collections.timeStampModel = Alloy.createCollection(&quot;timeStampModel&q
 
 
 /**
- *  Namespace Function 
+ *  Hauptnamensraum
  * 
- * @module tsa
+ * @module TSA
  * */
 var TSA = TSA || {};
-// var mod = require(&#x27;namespaceGenerator&#x27;);
-// mod.extendNamespace(TS, &#x27;TS.timeStamp&#x27;);
-TSA.namespace = function ( ns_string ) {
-	var parts = ns_string.split( &#x27;.&#x27; ),
-		parent = TSA, i;
-	if ( parts[ 0 ] === &quot;TS&quot; ) {
-		parts = parts.slice( 1 );
-	}
-	for ( i = 0; i &lt; parts.length; i += 1 ) {
-		if ( typeof parent[ parts[ i ] ] === &quot;undefined&quot; ) {
-			parent[ parts[ i ] ] = {};
-		}
-		parent = parent[ parts[ i ] ];
-	}
-	return parent;
-};
 
-TSA.namespace( &#x27;app.lib.timeStampManager&#x27; );
-TSA.namespace( &#x27;app.lib.timeStamp&#x27; );
-TSA.namespace( &#x27;app.lib.dateTime&#x27; );
 
     </pre>
 </div>

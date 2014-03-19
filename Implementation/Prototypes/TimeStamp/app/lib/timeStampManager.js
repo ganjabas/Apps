@@ -1,3 +1,4 @@
+require('util').extendNamespace(TSA, 'TSA.app.lib.timeStampManager');
 /**
  * Diese Klasse kümmert sich um die Zeitstempel. Sie 
  * bietet Methoden zum Hinzufügen und zum Entfernen

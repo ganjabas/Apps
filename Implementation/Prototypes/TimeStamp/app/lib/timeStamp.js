@@ -1,3 +1,4 @@
+require('util').extendNamespace(TSA, 'TSA.app.lib.timeStamp');
 /**
  * Bildet eine Datenstruktur für ein Zeitstempel.
  *

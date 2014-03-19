@@ -1,3 +1,4 @@
+require('util').extendNamespace(TSA, 'TSA.app.lib.dateTime');
 /**
  * Stellt Methoden zur Ermittlung des aktuellen
  * Datums und der aktuellen Zeit bereit.
