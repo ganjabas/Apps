@@ -11,8 +11,11 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 //Alloy.createCollection("name der model datei");
-Alloy.Collections.timeStampModel = Alloy.createCollection("timeStampModel");
+//Alloy.Collections.timeStampModel = Alloy.createCollection("timeStampModel");
 
+Alloy.Collections.timeStampModel = new Backbone.Collection();
+Alloy.Collections.timeStampModel.reset();
+var Apiomat = require("/apiomat");
 
 /**
  *  Hauptnamensraum
@@ -20,4 +23,3 @@ Alloy.Collections.timeStampModel = Alloy.createCollection("timeStampModel");
  * @module TSA
  * */
 var TSA = TSA || {};
-

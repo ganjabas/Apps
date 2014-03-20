@@ -1,5 +1,5 @@
 <Alloy>
-	<Collection src="timeStampModel" />
+	<!-- <Collection src="timeStampModel" /> -->
 	<Tab id="historyTab">
 		<Window id="historyWindow">
 			<TableView id="tableview" dataCollection="timeStampModel" onClick="removeItem">

@@ -9,7 +9,8 @@ var timeStampModels = Alloy.Collections.timeStampModel,
 	dialog = Ti.UI.createOptionDialog(opts),
 	selectedRow=-1;
 
-timeStampModels.fetch();
+//timeStampModels.fetch();
+//signup();
 
 	dialog.addEventListener("click", function(e){
 	if(e.index === 0 && selectedRow >-1 ){
