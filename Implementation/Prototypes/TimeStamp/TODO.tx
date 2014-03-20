@@ -1,12 +1,24 @@
 - Struktur für Kommentare überlegen
 - Programmierrichtlinien festlegen 
+	- Namespaces sinnvoll kürzen z.B. Tsa.timeStamp
+	- Dateinamen kleinschreiben und in CamelCase
+	- variablen und methoden klein schreiben und in CamelCase
+	- Konstruktoren groß schreiben
+	- Konstanten komplett in groß schreiben
+	- Namespaces klein schreiben
+	- Ordner klein schreiben
+	- member mit "m_" anfangen und mit großem Buchstaben beginnen z.B. m_TimeStamp
 - warum ist die app so groß? wegen DB?
-- yuidoc besprechen
+- yuidoc in external Tools einbinden und tutorial machen
 - github besprechen
 - Fehlerbehandlung besprechen
-- Projektstruktur besprechen
+- Projektstruktur anlegen und dokumentieren
+	- Dokumentation
+	- Implementaion
+	- Organisation
+	- Release
 - Designrichtlinien besprechen
-- wegen CD fragen
-
-
-	
+- formattierungstool anpassen
+- tutorials machen
+- apiomat testen
+- Namespace für Projekt anlegen z.B. tsa.app.controllers
