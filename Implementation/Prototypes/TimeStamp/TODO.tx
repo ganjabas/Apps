@@ -1,10 +1,12 @@
-
-
-	//TODO parser stringToInt schreiben, db-struktur überlegen, removeItem schreiben
-	//TODO Struktur für Kommentare überlegen, folien machen
-	//TODO sinnvolle Namen für Variablen überlegen, packages, warum ist die app so groß? wegen DB?
-	//TODO bild machen + button, schöner machen
-	//TODO yuidoc konfigurieren, github, wie svn im institut benutzen d.h ohne Eclipse, video ansehen
-	//TODO projektstruktur anlegen
-	//TODO Fehlerbehandlung
+- Struktur für Kommentare überlegen
+- Programmierrichtlinien festlegen 
+- warum ist die app so groß? wegen DB?
+- yuidoc besprechen
+- github besprechen
+- Fehlerbehandlung besprechen
+- Projektstruktur besprechen
+- Designrichtlinien besprechen
+- wegen CD fragen
+- beispiele raussuchen
+- diebstahl app
 	
