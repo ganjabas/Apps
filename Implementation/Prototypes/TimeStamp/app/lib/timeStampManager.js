@@ -19,14 +19,43 @@ TSA.app.lib.timeStampManager = {
 	 */
 	addTimeStamp : function(collection, timeStamp) {
 
-		// var model = Alloy.createModel('timeStampModel', {
-		// startDate : timeStamp.getStartDate(),
-		// endDate : timeStamp.getEndDate(),
-		// startTime : timeStamp.getStartTime(),
-		// endTime: timeStamp.getEndTime(),
-		// total : timeStamp.getStartTime()+"-"+timeStamp.getEndTime()
-		// });
+		var model = Alloy.createModel('timeStampModel', {
+		startDate : timeStamp.getStartDate(),
+		endDate : timeStamp.getEndDate(),
+		startTime : timeStamp.getStartTime(),
+		endTime: timeStamp.getEndTime(),
+		total : timeStamp.getStartTime()+"-"+timeStamp.getEndTime()
+		});
 
+		collection.add(model);
+		model.save();
+		collection.fetch();
+	},
+
+	/**
+	 * Entfernt einen Zeitstempel aus der Liste und aus der
+	 * Datenbank.
+	 *
+	 * @method removeTimeStamp
+	 * @param {Collection} collection eine Liste mit Models
+	 * @param {Integer} index Index der Zeile die entfernwerden soll.
+	 */
+	removeTimeStamp : function(collection, index) {
+
+		var model = collection.at(index);
+
+		collection.remove(model);
+		model.destroy();
+		collection.fetch();
+	},
+	
+	/**
+	 * Daten in die Apiomatcloud schreiben.
+	 * 
+ 	 * @param {timeStamp} timeStamp
+	 */
+	uploadTimeStamp : function(timeStamp){
+		
 		var timeStamp = new Apiomat.timeStampModelApiomat();
 		timeStamp.setStartDate(timeStamp.getStartDate());
 		timeStamp.setEndDate(timeStamp.getEndDate());
@@ -52,26 +81,5 @@ TSA.app.lib.timeStampManager = {
 				//$.addbook.close();
 			}
 		});
-
-		//collection.add(model);
-		//model.save();
-		collection.fetch();
-	},
-
-	/**
-	 * Entfernt einen Zeitstempel aus der Liste und aus der
-	 * Datenbank.
-	 *
-	 * @method removeTimeStamp
-	 * @param {Collection} collection eine Liste mit Models
-	 * @param {Integer} index Index der Zeile die entfernwerden soll.
-	 */
-	removeTimeStamp : function(collection, index) {
-
-		var model = collection.at(index);
-
-		collection.remove(model);
-		model.destroy();
-		collection.fetch();
 	}
 };
